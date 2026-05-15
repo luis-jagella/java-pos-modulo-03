@@ -13,11 +13,11 @@ A aula também passou pelos conceitos de OpenJDK e GraalVM, entendendo diferenç
 
 Por fim, houve uma introdução ao ecossistema de IA integrado ao Java utilizando LangChain4j, compreendendo sua função como camada de integração entre aplicações Java e modelos de IA generativa, permitindo construção de chatbots, RAGs, ferramentas inteligentes e integrações com LLMs.
 
-Próximos passo:
+# Próximos passo:
 
-criar estrutura do módulo 03
-adicionar README da aula 01
-adicionar dependências iniciais do Quarkus
-criar package base
-subir anotações/conceitos estudados
-organizar pastas e planejamento
+* criar estrutura do módulo 03
+* adicionar README da aula 01
+* adicionar dependências iniciais do Quarkus
+* criar package base
+* subir anotações/conceitos estudados
+* organizar pastas e planejamento

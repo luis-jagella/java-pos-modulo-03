@@ -15,7 +15,6 @@ Por fim, houve uma introdução ao ecossistema de IA integrado ao Java utilizand
 
 # Próximos passos:
 
-* criar estrutura do módulo 03
 * adicionar README da aula 01
 * adicionar dependências iniciais do Quarkus
 * criar package base

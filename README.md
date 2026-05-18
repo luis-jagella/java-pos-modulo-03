@@ -20,4 +20,3 @@ Por fim, houve uma introdução ao ecossistema de IA integrado ao Java utilizand
 * criar package base
 * subir anotações/conceitos estudados
 * organizar pastas e planejamento
-* organizar pastas e planejamento* organizar pastas e planejamento

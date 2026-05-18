@@ -13,7 +13,7 @@ A aula também passou pelos conceitos de OpenJDK e GraalVM, entendendo diferenç
 
 Por fim, houve uma introdução ao ecossistema de IA integrado ao Java utilizando LangChain4j, compreendendo sua função como camada de integração entre aplicações Java e modelos de IA generativa, permitindo construção de chatbots, RAGs, ferramentas inteligentes e integrações com LLMs.
 
-# Próximos passos:
+## Próximos passos:
 
 * adicionar README da aula 02
 * adicionar dependências iniciais do Quarkus

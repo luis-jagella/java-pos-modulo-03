@@ -47,3 +47,6 @@ Compilação nativa:
 Código Java → Compilação nativa → Executável → Aplicação em execução
 
 Também foi discutido que a compilação nativa possui algumas limitações e cuidados, como maior tempo de build e possíveis adaptações necessárias para recursos que dependem fortemente de reflexão dinâmica.
+
+# Aula 05 - Desenvolvimento e Consumo de APIS REST
+

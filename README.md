@@ -66,3 +66,12 @@ Durante a aula também foi possível reforçar conceitos relacionados ao modelo 
 
 Cliente → Requisição HTTP → API → Processamento → Resposta
 
+Conceitos reforçados:
+
+- Estrutura básica de uma API REST;
+- Métodos HTTP e suas responsabilidades;
+- Criação de endpoints;
+- Comunicação entre sistemas;
+- Consumo de APIs externas;
+- Troca de dados via HTTP.
+

@@ -50,3 +50,28 @@ Também foi discutido que a compilação nativa possui algumas limitações e cu
 
 # Aula 05 - Desenvolvimento e Consumo de APIS REST
 
+Nesta aula foram apresentados os conceitos básicos para desenvolvimento e consumo de APIs REST utilizando Java no ecossistema do Quarkus.
+
+Foi realizada uma introdução aos principais métodos HTTP utilizados no desenvolvimento de aplicações backend, compreendendo o papel de cada operação dentro de uma API:
+
+- GET → utilizado para consultar ou buscar informações;
+- PUT → utilizado para atualizar informações existentes;
+- DELETE → utilizado para remover dados.
+
+Também foi demonstrado como uma API expõe endpoints para comunicação entre sistemas, permitindo que aplicações troquem informações através de requisições HTTP.
+
+Além da criação de endpoints básicos, foi apresentado o consumo de APIs externas, demonstrando como aplicações podem realizar chamadas para serviços de terceiros e utilizar seus dados dentro da própria aplicação.
+
+Durante a aula também foi possível reforçar conceitos relacionados ao modelo cliente-servidor e ao fluxo de comunicação entre aplicações:
+
+Cliente → Requisição HTTP → API → Processamento → Resposta
+
+Conceitos reforçados:
+
+- Estrutura básica de uma API REST;
+- Métodos HTTP e suas responsabilidades;
+- Criação de endpoints;
+- Comunicação entre sistemas;
+- Consumo de APIs externas;
+- Troca de dados via HTTP.
+

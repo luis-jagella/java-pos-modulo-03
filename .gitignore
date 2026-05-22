@@ -4,3 +4,9 @@
 
 .idea/
 *.iml
+target/
+# logs
+*.log
+# sistema
+.DS_Store
+Thumbs.db

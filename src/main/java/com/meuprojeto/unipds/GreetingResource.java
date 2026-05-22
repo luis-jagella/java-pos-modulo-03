@@ -1,16 +1,36 @@
 package com.meuprojeto.unipds;
 
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 
-@Path("/hello")
+@Path("/users")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 public class GreetingResource {
 
+    private User usuario = new User(
+            1L,
+            "Luis"
+    );
+
     @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String hello() {
-        return "Hello this is my first API implementation with Quarkus";
+    public User buscar() {
+        return usuario;
+    }
+
+    @PUT
+    public User atualizar(User novoUsuario) {
+
+        usuario.nome = novoUsuario.nome;
+
+        return usuario;
+    }
+
+    @DELETE
+    public String deletar() {
+
+        usuario = null;
+
+        return "Usuário removido";
     }
 }

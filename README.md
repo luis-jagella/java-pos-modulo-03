@@ -85,6 +85,22 @@ Conceitos abordados:
 
 - Retry → realiza novas tentativas automaticamente;
 - Timeout → limita o tempo máximo de espera;
+
+# Aula 07 — Persistência de Dados com Panache
+
+Nesta aula foi apresentada a persistência de dados utilizando Panache no Quarkus, entendendo como o framework simplifica operações comuns de banco de dados.
+
+Foi demonstrado como entidades podem ser mapeadas através de anotações e como operações básicas de persistência podem ser realizadas sem a necessidade de implementar consultas complexas manualmente.
+
+Conceitos abordados:
+
+- Mapeamento de entidades;
+- Persistência de objetos;
+- Consultas simplificadas;
+- Operações CRUD;
+- Integração entre aplicação e banco de dados.
+
+Também foi possível compreender como o Panache reduz código repetitivo ao fornecer métodos prontos para operações frequentes.
 - Fallback → define respostas alternativas;
 - Circuit Breaker → interrompe chamadas quando muitas falhas ocorrem.
 

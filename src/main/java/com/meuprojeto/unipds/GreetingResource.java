@@ -31,6 +31,6 @@ public class GreetingResource {
 
         usuario = null;
 
-        return "Usuário removido";
+        return "User removed";
     }
 }

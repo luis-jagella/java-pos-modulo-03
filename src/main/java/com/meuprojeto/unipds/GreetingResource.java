@@ -19,6 +19,7 @@ public class GreetingResource {
     }
 
     @PUT
+    public User atualize(User novoUsuario) {
 
         usuario.nome = novoUsuario.nome;
 
@@ -26,7 +27,7 @@ public class GreetingResource {
     }
 
     @DELETE
-    public String deletar() {
+    public String delete() {
 
         usuario = null;
 

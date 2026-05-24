@@ -19,7 +19,6 @@ public class GreetingResource {
     }
 
     @PUT
-    public User atualizar(User novoUsuario) {
 
         usuario.nome = novoUsuario.nome;
 

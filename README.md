@@ -75,3 +75,33 @@ Conceitos reforçados:
 - Consumo de APIs externas;
 - Troca de dados via HTTP.
 
+# Aula 06 — Uso da API Fault Tolerance
+
+Nesta aula foram apresentados mecanismos de tolerância a falhas utilizados em aplicações distribuídas, principalmente em cenários onde uma aplicação depende de APIs externas ou outros serviços.
+
+Foi possível compreender como aplicações podem implementar estratégias para evitar indisponibilidade total do sistema quando um serviço apresenta falhas ou lentidão.
+
+Conceitos abordados:
+
+- Retry → realiza novas tentativas automaticamente;
+- Timeout → limita o tempo máximo de espera;
+
+# Aula 07 — Persistência de Dados com Panache
+
+Nesta aula foi apresentada a persistência de dados utilizando Panache no Quarkus, entendendo como o framework simplifica operações comuns de banco de dados.
+
+Foi demonstrado como entidades podem ser mapeadas através de anotações e como operações básicas de persistência podem ser realizadas sem a necessidade de implementar consultas complexas manualmente.
+
+Conceitos abordados:
+
+- Mapeamento de entidades;
+- Persistência de objetos;
+- Consultas simplificadas;
+- Operações CRUD;
+- Integração entre aplicação e banco de dados.
+
+Também foi possível compreender como o Panache reduz código repetitivo ao fornecer métodos prontos para operações frequentes.
+- Fallback → define respostas alternativas;
+- Circuit Breaker → interrompe chamadas quando muitas falhas ocorrem.
+
+Esses mecanismos aumentam a resiliência da aplicação e tornam sistemas distribuídos mais seguros e estáveis.

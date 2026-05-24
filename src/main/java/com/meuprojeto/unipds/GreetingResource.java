@@ -14,7 +14,7 @@ public class GreetingResource {
     );
 
     @GET
-    public User buscar() {
+    public User search() {
         return usuario;
     }
 

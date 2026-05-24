@@ -10,7 +10,7 @@ public class GreetingResource {
 
     private User usuario = new User(
             1L,
-            "Luis"
+            "Luís Gabriel"
     );
 
     @GET

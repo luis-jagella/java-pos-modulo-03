@@ -75,3 +75,17 @@ Conceitos reforçados:
 - Consumo de APIs externas;
 - Troca de dados via HTTP.
 
+# Aula 06 — Uso da API Fault Tolerance
+
+Nesta aula foram apresentados mecanismos de tolerância a falhas utilizados em aplicações distribuídas, principalmente em cenários onde uma aplicação depende de APIs externas ou outros serviços.
+
+Foi possível compreender como aplicações podem implementar estratégias para evitar indisponibilidade total do sistema quando um serviço apresenta falhas ou lentidão.
+
+Conceitos abordados:
+
+- Retry → realiza novas tentativas automaticamente;
+- Timeout → limita o tempo máximo de espera;
+- Fallback → define respostas alternativas;
+- Circuit Breaker → interrompe chamadas quando muitas falhas ocorrem.
+
+Esses mecanismos aumentam a resiliência da aplicação e tornam sistemas distribuídos mais seguros e estáveis.

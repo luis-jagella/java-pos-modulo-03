@@ -105,3 +105,23 @@ Também foi possível compreender como o Panache reduz código repetitivo ao for
 - Circuit Breaker → interrompe chamadas quando muitas falhas ocorrem.
 
 Esses mecanismos aumentam a resiliência da aplicação e tornam sistemas distribuídos mais seguros e estáveis.
+
+# Aula 08 — Autenticação e Segurança com JWT e RBAC
+
+Nesta aula foram apresentados conceitos de autenticação e autorização em APIs REST utilizando JWT e RBAC.
+
+Foi possível compreender como aplicações modernas realizam controle de acesso através de tokens de autenticação, evitando a necessidade de enviar usuário e senha a cada requisição.
+
+Conceitos abordados:
+
+- JWT (JSON Web Token);
+- Autenticação baseada em token;
+- Header Authorization;
+- Controle de acesso por papéis (RBAC);
+- Proteção de endpoints.
+
+Fluxo básico:
+
+Usuário → Login → Geração do Token → Requisições autenticadas
+
+Também foi apresentado o conceito de RBAC (Role Based Access Control), permitindo restringir funcionalidades com base nos papéis atribuídos aos usuários, como ADMIN e USER.

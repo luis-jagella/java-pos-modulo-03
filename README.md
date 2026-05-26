@@ -133,3 +133,19 @@ Nesta aula foram apresentados conceitos de observabilidade em aplicações moder
 Foi possível compreender como aplicações podem gerar informações para monitoramento, diagnóstico e análise de comportamento em tempo de execução.
 
 Os três pilares da observabilidade abordados foram:
+
+- Logs → registro de eventos da aplicação;
+- Métricas → indicadores numéricos de desempenho;
+- Traces → rastreamento do fluxo de execução.
+
+Também foi possível compreender como o OpenTelemetry permite acompanhar requisições entre diferentes serviços, facilitando a identificação de gargalos, falhas e problemas de desempenho.
+
+Fluxo simplificado:
+
+Cliente → API → Serviços → Banco → Resposta
+
+Com traces:
+
+Cliente → API → Serviço A → Serviço B → Banco
+
+Tempo de execução registrado em cada etapa.

@@ -125,3 +125,11 @@ Fluxo básico:
 Usuário → Login → Geração do Token → Requisições autenticadas
 
 Também foi apresentado o conceito de RBAC (Role Based Access Control), permitindo restringir funcionalidades com base nos papéis atribuídos aos usuários, como ADMIN e USER.
+
+# Aula 09 — Observabilidade com OpenTelemetry
+
+Nesta aula foram apresentados conceitos de observabilidade em aplicações modernas utilizando OpenTelemetry.
+
+Foi possível compreender como aplicações podem gerar informações para monitoramento, diagnóstico e análise de comportamento em tempo de execução.
+
+Os três pilares da observabilidade abordados foram:

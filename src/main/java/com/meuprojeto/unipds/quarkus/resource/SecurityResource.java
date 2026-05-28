@@ -1,4 +1,4 @@
-package com.meuprojeto.unipds.aula08.resource;
+package com.meuprojeto.unipds.quarkus.resource;
 
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.ws.rs.GET;

@@ -1,6 +1,6 @@
-package com.meuprojeto.unipds.aula07.service;
+package com.meuprojeto.unipds.quarkus.aula07.service;
 
-import com.meuprojeto.unipds.aula07.entity.Usuario;
+import com.meuprojeto.unipds.quarkus.aula07.entity.Usuario;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.transaction.Transactional;

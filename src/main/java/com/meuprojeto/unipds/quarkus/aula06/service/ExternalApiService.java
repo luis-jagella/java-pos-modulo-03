@@ -1,4 +1,4 @@
-package com.meuprojeto.unipds.aula06.service;
+package com.meuprojeto.unipds.quarkus.aula06.service;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import org.eclipse.microprofile.faulttolerance.Fallback;

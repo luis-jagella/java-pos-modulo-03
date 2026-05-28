@@ -1,6 +1,6 @@
-package com.meuprojeto.unipds.aula06.resource;
+package com.meuprojeto.unipds.quarkus.aula06.resource;
 
-import com.meuprojeto.unipds.aula06.service.ExternalApiService;
+import com.meuprojeto.unipds.quarkus.aula06.service.ExternalApiService;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;

@@ -1,7 +1,7 @@
-package com.meuprojeto.unipds.aula07.resource;
+package com.meuprojeto.unipds.quarkus.aula07.resource;
 
-import com.meuprojeto.unipds.aula07.entity.Usuario;
-import com.meuprojeto.unipds.aula07.service.UsuarioService;
+import com.meuprojeto.unipds.quarkus.aula07.entity.Usuario;
+import com.meuprojeto.unipds.quarkus.aula07.service.UsuarioService;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;

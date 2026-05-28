@@ -1,4 +1,4 @@
-package com.meuprojeto.unipds.aula09.resource;
+package com.meuprojeto.unipds.quarkus.resource;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

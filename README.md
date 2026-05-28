@@ -149,3 +149,5 @@ Com traces:
 Cliente → API → Serviço A → Serviço B → Banco
 
 Tempo de execução registrado em cada etapa.
+
+## Aula 01 - Outro módulo...

@@ -1,7 +1,7 @@
 # java-pos-modulo-03
 Desenvolvimento de Aplicações Back-End com Spring Boot e Quarkus
 
-## Módulo Tres
+## Módulo 03
 
 ### Módulo 01
 Aula 01 — Introdução ao Quarkus

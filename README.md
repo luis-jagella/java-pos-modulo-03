@@ -4,7 +4,7 @@ Desenvolvimento de Aplicações Back-End com Spring Boot e Quarkus
 ## Módulo 03
 
 ### Módulo 1
-Aula 01 — Introdução ao Quarkus
+#### Aula 01 — Introdução ao Quarkus
 
 Nesta primeira aula do módulo de Quarkus, foram apresentados os conceitos iniciais do ecossistema moderno de desenvolvimento Java voltado para aplicações cloud-native, microsserviços e APIs REST. O foco principal foi compreender como frameworks atuais abstraem grande parte da complexidade do desenvolvimento backend, principalmente em cenários que envolvem containers, escalabilidade e integração com ambientes orquestrados.
 

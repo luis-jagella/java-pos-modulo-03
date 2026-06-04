@@ -25,4 +25,12 @@ public class UsuarioController {
 
         return usuario;
     }
+
+    @GetMapping("/{id}")
+    public List<Usuario> listarById() {
+
+        for (Usuario usuario : usuarios) {
+            // faet: implementa método pra listar por ID
+        }
+    }
 }

@@ -27,7 +27,7 @@ public class UsuarioController {
     }
 
     @GetMapping("/{id}")
-    public List<Usuario> listarById() {
+    public List<Usuario> buscarPorID() {
 
         for (Usuario usuario : usuarios) {
             // faet: implementa método pra listar por ID

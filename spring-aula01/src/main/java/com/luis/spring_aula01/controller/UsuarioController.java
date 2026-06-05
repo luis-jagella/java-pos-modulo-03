@@ -34,9 +34,7 @@ public class UsuarioController {
 
             Long idBusca = usuario.getId();
 
-            if (idBusca.equals(id)) {
-                return usuario;
-            }
+            if (idBusca.equals(id)) return usuario;
         }
 
         return null;

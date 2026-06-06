@@ -157,3 +157,5 @@ Tempo de execução registrado em cada etapa.
 #### Aula 01 - Spring Boot (Isidro)
 
 * Implememtei 3 endpoints para testes.
+** 2 GET's 
+** 1 POST

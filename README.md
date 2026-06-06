@@ -158,4 +158,7 @@ Tempo de execução registrado em cada etapa.
 
 * Implememtei 3 endpoints para testes.
 ** 2 GET's 
+*** GET all users
+*** GET by ID
+
 ** 1 POST

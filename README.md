@@ -155,3 +155,5 @@ Tempo de execução registrado em cada etapa.
 
 ### Submódulo 1
 #### Aula 01 - Spring Boot (Isidro)
+
+* Implememtei 3 endpoints para testes.

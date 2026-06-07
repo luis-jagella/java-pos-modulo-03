@@ -1,4 +1,4 @@
-# java-pos-modulo-03
+# Java-pos-modulo-03
 Desenvolvimento de Aplicações Back-End com Spring Boot e Quarkus
 
 ## Módulo 03

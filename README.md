@@ -1,5 +1,5 @@
 # Java-Pós-Módulo-03
-Desenvolvimento de Aplicações Back-End com Spring Boot e Quarkus
+Desenvolvimento de Aplicações Back-End com Quarkus e Spring Boot
 
 ## Módulo 03
 

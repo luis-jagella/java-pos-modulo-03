@@ -164,7 +164,6 @@ Implememtei 3 endpoints para testes:
 
 *1 POST:*
 * Send user;
----
 
 ### Aula 02 — Spring: Criação de APIs REST
 

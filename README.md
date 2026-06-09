@@ -185,6 +185,4 @@ Serialização e desserialização automática de objetos Java para JSON.
 
 Também foi possível compreender como o Spring Boot simplifica a criação de serviços REST, permitindo o desenvolvimento rápido de APIs para comunicação entre sistemas.
 
-Fluxo básico trabalhado durante a aula:
-
 Cliente → Requisição HTTP → Controller → Processamento → Resposta JSON

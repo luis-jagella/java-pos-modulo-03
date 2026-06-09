@@ -166,7 +166,7 @@ Implememtei 3 endpoints para testes:
 * Send user;
 ---
 
-Aula 02 — Spring: Criação de APIs REST
+### Aula 02 — Spring: Criação de APIs REST
 
 Nesta aula foram apresentados os conceitos fundamentais para criação de APIs REST utilizando Spring Boot.
 

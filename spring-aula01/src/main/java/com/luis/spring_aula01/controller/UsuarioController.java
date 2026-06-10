@@ -54,5 +54,7 @@ public class UsuarioController {
                 return usuario;
             }
         }
+
+        return null;
     }
 }

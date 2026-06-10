@@ -1,9 +1,12 @@
-# java-pos-modulo-03
-Desenvolvimento de Aplicações Back-End com Spring Boot e Quarkus
+---
+# Java-Pós-Módulo-03
+Desenvolvimento de Aplicações backend com Quarkus e Spring Boot
 
+___
 ## Módulo 03
 
-### Submódulo 1
+### Submódulo 1:
+
 #### Aula 01 — Introdução ao Quarkus
 
 Nesta primeira aula do módulo de Quarkus, foram apresentados os conceitos iniciais do ecossistema moderno de desenvolvimento Java voltado para aplicações cloud-native, microsserviços e APIs REST. O foco principal foi compreender como frameworks atuais abstraem grande parte da complexidade do desenvolvimento backend, principalmente em cenários que envolvem containers, escalabilidade e integração com ambientes orquestrados.
@@ -155,3 +158,33 @@ Tempo de execução registrado em cada etapa.
 
 ### Submódulo 1
 #### Aula 01 - Spring Boot (Isidro)
+
+Implememtei 3 endpoints para testes:
+
+*2 GET's:*
+* GET all users;
+* GET by ID;
+
+*1 POST:*
+* Send user;
+
+### Aula 02 — Spring: Criação de APIs REST
+
+Nesta aula foram apresentados os conceitos fundamentais para criação de APIs REST utilizando Spring Boot.
+
+Foi demonstrado como o framework permite expor endpoints HTTP de forma simples através de anotações, facilitando a comunicação entre aplicações e serviços.
+
+Durante a aula foram explorados os principais componentes envolvidos na construção de uma API REST, incluindo controllers, mapeamento de rotas e manipulação de requisições e respostas HTTP.
+
+Conceitos abordados:
+
+Criação de Controllers com @RestController;
+Mapeamento de endpoints utilizando @RequestMapping;
+Criação de operações GET e POST;
+Recebimento de dados através de @RequestBody;
+Utilização de parâmetros de rota com @PathVariable;
+Serialização e desserialização automática de objetos Java para JSON.
+
+Também foi possível compreender como o Spring Boot simplifica a criação de serviços REST, permitindo o desenvolvimento rápido de APIs para comunicação entre sistemas.
+
+Cliente → Requisição HTTP → Controller → Processamento → Resposta JSON

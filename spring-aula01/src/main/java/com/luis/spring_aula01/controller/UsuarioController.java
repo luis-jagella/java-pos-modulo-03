@@ -13,7 +13,7 @@ public class UsuarioController {
 
     private final List<Usuario> usuarios = new ArrayList<>();
 
-    ///  GET
+    /// GET
     @GetMapping
     public List<Usuario> listar() {
 

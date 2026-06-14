@@ -19,7 +19,6 @@ public class UsuarioController {
         return usuarios;
     }
 
-    /// POST
     @PostMapping
     public Usuario cadastrar(@RequestBody Usuario usuario) {
 

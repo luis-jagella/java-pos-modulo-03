@@ -40,7 +40,6 @@ public class UsuarioController {
         return null;
     }
 
-    /// DELETE by ID
     @DeleteMapping("/{id}")
     public Usuario deleteByID(@PathVariable Long id) {
 

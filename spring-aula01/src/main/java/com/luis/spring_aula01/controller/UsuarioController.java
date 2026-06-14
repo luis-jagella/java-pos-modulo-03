@@ -27,7 +27,6 @@ public class UsuarioController {
         return usuario;
     }
 
-    /// GET By ID
     @GetMapping("/{id}")
     public Usuario buscarPorID(@PathVariable Long id) {
 

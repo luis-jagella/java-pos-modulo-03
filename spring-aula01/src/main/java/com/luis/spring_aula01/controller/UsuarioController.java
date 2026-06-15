@@ -57,4 +57,9 @@ public class UsuarioController {
 
         return null;
     }
+
+    @PutMapping("/{id}")
+    public Usuario atualizar(@PathVariable Long id) {
+        
+    }
 }

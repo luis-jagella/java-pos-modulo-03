@@ -59,10 +59,7 @@ public class UsuarioController {
     }
 
     @PutMapping("/{id}")
-    public Usuario atualizar(
-            @PathVariable Long id,
-            @RequestBody Usuario usuarioAtualizado
-    ) {
+    public Usuario atualizar(@PathVariable Long id, @RequestBody Usuario usuarioAtualizado) {
 
         for (Usuario usuario : usuarios) {
 

@@ -64,6 +64,20 @@ public class UsuarioController {
             @RequestBody Usuario usuarioAtualizado
     ) {
 
+        for (Usuario usuario : usuarios) {
 
+            Long idBusca = usuario.getId();
+
+            if (idBusca.equals(id)) {
+
+                usuario.setNome(
+                        usuarioAtualizado.getNome()
+                );
+
+                return usuario;
+            }
+        }
+
+        return null;
     }
 }

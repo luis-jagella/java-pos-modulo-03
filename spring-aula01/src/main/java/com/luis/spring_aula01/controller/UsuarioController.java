@@ -77,4 +77,6 @@ public class UsuarioController {
 
         return null;
     }
+
+    // TODO: //GET /usuarios/total
 }

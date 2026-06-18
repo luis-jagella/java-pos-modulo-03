@@ -1,6 +1,7 @@
 package com.luis.spring_aula01.controller;
 
 import com.luis.spring_aula01.model.Usuario;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.service.annotation.GetExchange;
 
@@ -59,7 +60,7 @@ public class UsuarioController {
     }
 
     @PutMapping("/{id}")
-    public Usuario atualizar(@PathVariable Long id, @RequestBody Usuario usuarioAtualizado) {
+    public ResponseEntity<Usuario> atualizar(@PathVariable Long id, @RequestBody Usuario usuarioAtualizado) {
 
         for (Usuario usuario : usuarios) {
 
@@ -71,11 +72,11 @@ public class UsuarioController {
                         usuarioAtualizado.getNome()
                 );
 
-                return usuario;
+                return ResponseEntity.ok(usuario);
             }
         }
 
-        return null;
+        return ResponseEntity.notFound().build();
     }
 
     // TODO: //GET /usuarios/total

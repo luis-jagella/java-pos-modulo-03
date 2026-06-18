@@ -15,9 +15,9 @@ public class UsuarioController {
     private final List<Usuario> usuarios = new ArrayList<>();
 
     @GetMapping
-    public List<Usuario> listar() {
+    public ResponseEntity<List<Usuario>> listar() {
 
-        return usuarios;
+        return ResponseEntity.ok(usuarios);
     }
 
     @PostMapping

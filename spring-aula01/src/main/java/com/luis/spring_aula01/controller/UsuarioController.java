@@ -39,21 +39,17 @@ public class UsuarioController {
     }
 
     @DeleteMapping("/{id}")
-    public Usuario deleteByID(@PathVariable Long id) {
+    public ResponseEntity<Usuario> deleteByID(@PathVariable Long id) {
 
         for (Usuario usuario : usuarios) {
-
             Long idBusca = usuario.getId();
-
             if (idBusca.equals(id)) {
-
                 usuarios.remove(usuario);
-
-                return usuario;
+                return ResponseEntity.ok(usuario);
             }
         }
 
-        return null;
+        return ResponseEntity.notFound().build();
     }
 
     @PutMapping("/{id}")

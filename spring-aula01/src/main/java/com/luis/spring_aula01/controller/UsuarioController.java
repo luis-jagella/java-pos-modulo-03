@@ -21,24 +21,21 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public Usuario cadastrar(@RequestBody Usuario usuario) {
+    public ResponseEntity<Usuario> cadastrar(@RequestBody Usuario usuario) {
 
         usuarios.add(usuario);
-
-        return usuario;
+        return ResponseEntity.ok(usuario);
     }
 
     @GetMapping("/{id}")
-    public Usuario buscarPorID(@PathVariable Long id) {
-
+    public ResponseEntity<Usuario> buscarPorID(@PathVariable Long id) {
         for (Usuario usuario : usuarios) {
-
             Long idBusca = usuario.getId();
-
-            if (idBusca.equals(id)) return usuario;
+            if (idBusca.equals(id)) {
+                return ResponseEntity.ok(usuario);
+            }
         }
-
-        return null;
+        return ResponseEntity.notFound().build();
     }
 
     @DeleteMapping("/{id}")

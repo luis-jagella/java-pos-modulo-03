@@ -22,9 +22,8 @@ public class UsuarioController {
 
     @PostMapping
     public ResponseEntity<Usuario> cadastrar(@RequestBody Usuario usuario) {
-
         usuarios.add(usuario);
-        return ResponseEntity.ok(usuario);
+        return ResponseEntity.status(201).body(usuario);
     }
 
     @GetMapping("/{id}")

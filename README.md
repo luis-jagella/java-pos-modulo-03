@@ -187,3 +187,5 @@ Serialização e desserialização automática de objetos Java para JSON.
 Também foi possível compreender como o Spring Boot simplifica a criação de serviços REST, permitindo o desenvolvimento rápido de APIs para comunicação entre sistemas.
 
 Cliente → Requisição HTTP → Controller → Processamento → Resposta JSON
+
+---

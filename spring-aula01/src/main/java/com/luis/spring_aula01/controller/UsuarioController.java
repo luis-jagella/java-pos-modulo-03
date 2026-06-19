@@ -72,8 +72,4 @@ public class UsuarioController {
     }
 
     // TODO: //GET /usuarios/total
-
-    //{
-    //    "total": 3
-    //}
 }

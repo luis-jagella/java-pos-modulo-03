@@ -70,6 +70,4 @@ public class UsuarioController {
 
         return ResponseEntity.notFound().build();
     }
-
-    // TODO: //GET /usuarios/total
 }

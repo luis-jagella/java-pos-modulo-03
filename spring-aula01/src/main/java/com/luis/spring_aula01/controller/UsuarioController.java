@@ -3,7 +3,6 @@ package com.luis.spring_aula01.controller;
 import com.luis.spring_aula01.model.Usuario;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.service.annotation.GetExchange;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,5 +69,5 @@ public class UsuarioController {
 
         return ResponseEntity.notFound().build();
     }
-    
+
 }

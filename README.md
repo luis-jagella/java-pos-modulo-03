@@ -188,4 +188,6 @@ Também foi possível compreender como o Spring Boot simplifica a criação de s
 
 Cliente → Requisição HTTP → Controller → Processamento → Resposta JSON
 
+### Aula 03 — Spring: Integração com JPA
+
 ---

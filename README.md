@@ -210,4 +210,6 @@ Conceitos de ORM (Object Relational Mapping).
 Fluxo básico:
 
 Objeto Java → JPA → Banco de Dados
+
+Também foi possível compreender como o JPA reduz a complexidade do acesso a dados, permitindo que o desenvolvedor trabalhe principalmente com objetos Java em vez de comandos SQL para operações simples de persistência.
 ...

@@ -190,4 +190,24 @@ Cliente → Requisição HTTP → Controller → Processamento → Resposta JSON
 
 ### Aula 03 — Spring: Integração com JPA
 
+Nesta aula foram apresentados os conceitos fundamentais de persistência de dados utilizando JPA (Java Persistence API) no ecossistema Spring Boot.
+
+Foi possível compreender como objetos Java podem ser mapeados para tabelas de banco de dados através de anotações, permitindo que operações de persistência sejam realizadas de forma orientada a objetos, sem a necessidade de escrever comandos SQL para tarefas básicas.
+
+Durante a aula foram abordados os principais conceitos relacionados ao ORM (Object Relational Mapping), responsável por realizar a conversão entre entidades Java e estruturas relacionais do banco de dados.
+
+Conceitos abordados:
+
+Introdução ao JPA;
+Integração entre Spring Boot e banco de dados;
+Mapeamento de entidades com @Entity;
+Definição de chaves primárias com @Id;
+Geração automática de identificadores;
+Persistência de objetos;
+Operações básicas de CRUD;
+Conceitos de ORM (Object Relational Mapping).
+
+Fluxo básico:
+
+Objeto Java → JPA → Banco de Dados
 ...

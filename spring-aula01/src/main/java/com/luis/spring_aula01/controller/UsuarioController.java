@@ -70,5 +70,11 @@ public class UsuarioController {
         return ResponseEntity.notFound().build();
     }
 
-    //@GetMapping("/total")
+    @GetMapping("/total")
+    public ResponseEntity<Integer> totalUsuarios() {
+
+        return ResponseEntity.ok(
+                usuarios.size()
+        );
+    }
 }

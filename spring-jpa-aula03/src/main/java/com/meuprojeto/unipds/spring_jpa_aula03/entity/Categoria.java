@@ -1,6 +1,6 @@
 package com.meuprojeto.unipds.spring_jpa_aula03.entity;
 
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "categorias")

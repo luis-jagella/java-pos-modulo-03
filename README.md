@@ -167,7 +167,7 @@ Implememtei 3 endpoints para testes:
 *1 POST:*
 * Send user;
 
-### Aula 02 — Spring: Criação de APIs REST
+## Aula 02 — Spring: Criação de APIs REST
 
 Nesta aula foram apresentados os conceitos fundamentais para criação de APIs REST utilizando Spring Boot.
 
@@ -188,7 +188,7 @@ Também foi possível compreender como o Spring Boot simplifica a criação de s
 
 Cliente → Requisição HTTP → Controller → Processamento → Resposta JSON
 
-### Aula 03 — Spring: Integração com JPA
+## Aula 03 — Spring: Integração com JPA
 
 Nesta aula foram apresentados os conceitos fundamentais de persistência de dados utilizando JPA (Java Persistence API) no ecossistema Spring Boot.
 
@@ -222,6 +222,6 @@ MySQL
 JDBC
 ...
 
-### Aula 04 e 05 — Spring: Integração com JPA, Services, Query by Methog Name e Conclusão da API
+## Aula 04 e 05 — Spring: Integração com JPA, Services, Query by Methog Name e Conclusão da API
 
 

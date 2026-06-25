@@ -222,4 +222,6 @@ MySQL
 JDBC
 ...
 
-### Aula 04 — Spring: Integração com JPA
+### Aula 04 e 05 — Spring: Integração com JPA, Services, Query by Methog Name e Conclusão da API
+
+

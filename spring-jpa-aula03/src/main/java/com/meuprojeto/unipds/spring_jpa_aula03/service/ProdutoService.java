@@ -29,7 +29,9 @@ public class ProdutoService {
 
         Categoria categoria = categoriaRepository
                 .findById(request.getCategoriaId())
-                .orElseThrow();
+                .orElseThrow(() ->
+                        new RuntimeException("Categoria não encontrada.")
+                );
 
         Produto produto = new Produto();
 

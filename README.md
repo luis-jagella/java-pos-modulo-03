@@ -198,3 +198,4 @@ Nestas aulas o foco foi finalizar a construção da API. Foram explorados o enca
 - [ ] organizar pastas e planejamento
 - [ ] Refatorar controllers para utilizar a camada de services;
 - [ ] Finalizar endpoints com DTOs de request e response;
+- [ ] Testar relacionamento entre Produto e Categoria no Postman;

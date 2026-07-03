@@ -190,10 +190,7 @@ Nestas aulas o foco foi finalizar a construção da API. Foram explorados o enca
 
 ---
 
-## 🎯 Próximos Passos
-- [X] adicionar README da aula 02
-- [X] adicionar dependências iniciais do Quarkus
-- [X] criar package base
+## 🎯 Próximos Passos:
 - [ ] subir anotações/conceitos estudados
 - [ ] organizar pastas e planejamento
 - [ ] Refatorar controllers para utilizar a camada de services;

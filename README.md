@@ -1,4 +1,4 @@
-# Java-Pós-Módulo-03
+# Engenharia-Software-Java-Pós-Módulo-03
 Desenvolvimento de Aplicações backend com Quarkus e Spring Boot
 
 ---
@@ -190,9 +190,9 @@ Nestas aulas o foco foi finalizar a construção da API. Foram explorados o enca
 
 ---
 
-## 🎯 Próximos Passos
-- [ ] adicionar README da aula 02
-- [ ] adicionar dependências iniciais do Quarkus
-- [ ] criar package base
+## 🎯 Próximos Passos:
 - [ ] subir anotações/conceitos estudados
 - [ ] organizar pastas e planejamento
+- [ ] Refatorar controllers para utilizar a camada de services;
+- [ ] Finalizar endpoints com DTOs de request e response;
+- [ ] Testar relacionamento entre Produto e Categoria no Postman;

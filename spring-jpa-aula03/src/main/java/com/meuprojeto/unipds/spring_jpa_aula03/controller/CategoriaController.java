@@ -1,7 +1,7 @@
 package com.meuprojeto.unipds.spring_jpa_aula03.controller;
 
 import com.meuprojeto.unipds.spring_jpa_aula03.entity.Categoria;
-import com.meuprojeto.unipds.spring_jpa_aula03.repository.CategoriaRepository;
+import com.meuprojeto.unipds.spring_jpa_aula03.service.CategoriaService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,19 +10,19 @@ import java.util.List;
 @RequestMapping("/categorias")
 public class CategoriaController {
 
-    private final CategoriaRepository repository;
+    private final CategoriaService service;
 
-    public CategoriaController(CategoriaRepository repository) {
-        this.repository = repository;
+    public CategoriaController(CategoriaService service) {
+        this.service = service;
     }
 
     @GetMapping
     public List<Categoria> listar() {
-        return repository.findAll();
+        return service.listar();
     }
 
     @PostMapping
     public Categoria cadastrar(@RequestBody Categoria categoria) {
-        return repository.save(categoria);
+        return service.salvar(categoria);
     }
 }

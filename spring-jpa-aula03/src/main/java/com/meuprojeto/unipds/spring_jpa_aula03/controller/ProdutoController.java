@@ -24,7 +24,7 @@ public class ProdutoController {
     }
 
     @PostMapping
-    public Produto cadastrar(@RequestBody ProdutoRequest request) {
+    public ProdutoResponse cadastrar(@RequestBody ProdutoRequest request) {
         return service.salvar(request);
     }
 }

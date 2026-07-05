@@ -25,7 +25,7 @@ public class ProdutoService {
         this.categoriaRepository = categoriaRepository;
     }
 
-    public Produto salvar(ProdutoRequest request) {
+    public ProdutoResponse salvar(ProdutoRequest request) {
 
         Categoria categoria = categoriaRepository
                 .findById(request.getCategoriaId())
@@ -39,7 +39,14 @@ public class ProdutoService {
         produto.setPreco(request.getPreco());
         produto.setCategoria(categoria);
 
-        return produtoRepository.save(produto);
+        Produto produtoSalvo = produtoRepository.save(produto);
+
+        return new ProdutoResponse(
+                produtoSalvo.getId(),
+                produtoSalvo.getNome(),
+                produtoSalvo.getPreco(),
+                produtoSalvo.getCategoria().getNome()
+        );
     }
 
     public List<ProdutoResponse> listar() {

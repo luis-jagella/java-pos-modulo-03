@@ -189,6 +189,7 @@ Também foi possível compreender como o JPA reduz a complexidade do acesso a da
 Nestas aulas o foco foi finalizar a construção da API. Foram explorados o encapsulamento de regras de negócios na camada de Services e a utilização da funcionalidade *Query by Method Name* do Spring Data JPA, que permite criar consultas dinâmicas apenas nomeando os métodos na interface do repositório, otimizando bastante o tempo de desenvolvimento.
 
 #### Aula 06 - Controle Transacional
+Aula referente a controle transacional.
 
 ---
 

@@ -188,6 +188,8 @@ Também foi possível compreender como o JPA reduz a complexidade do acesso a da
 #### Aula 04 e 05 — Spring: Integração com JPA, Services, Query by Method Name e Conclusão da API
 Nestas aulas o foco foi finalizar a construção da API. Foram explorados o encapsulamento de regras de negócios na camada de Services e a utilização da funcionalidade *Query by Method Name* do Spring Data JPA, que permite criar consultas dinâmicas apenas nomeando os métodos na interface do repositório, otimizando bastante o tempo de desenvolvimento.
 
+#### Aula 06 - Controle Transacional
+
 ---
 
 ## 🎯 Próximos Passos:

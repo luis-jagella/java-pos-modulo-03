@@ -191,7 +191,7 @@ Nestas aulas o foco foi finalizar a construção da API. Foram explorados o enca
 #### Aula 06 - Controle Transacional
 Aula referente a controle transacional.
 
-Aulas 07,08 e 09 - OAuth e JWT/Token via Google
+### Aulas 07,08 e 09 - OAuth e JWT/Token via Google
 
 ---
 

@@ -3,7 +3,7 @@ Desenvolvimento de Aplicações backend com Quarkus e Spring Boot
 
 ---
 
-## 🚀 Módulo 03
+## Módulo 03
 
 ### Submódulo 1: Quarkus
 

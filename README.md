@@ -194,6 +194,8 @@ Aula referente a controle transacional.
 ### Aulas 07,08 e 09 - OAuth e JWT/Token via Google
 Nestas aulas, aprendemos sobre a autenticação durante/após as nossas requisições.
 
+## Módulo 04
+
 ---
 
 ## 🎯 Próximos Passos:

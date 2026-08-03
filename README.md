@@ -194,8 +194,9 @@ Aula referente a controle transacional.
 ### Aulas 07,08 e 09 - OAuth e JWT/Token via Google
 Nestas aulas, aprendemos sobre a autenticação durante/após as nossas requisições.
 
-## Submódulo 04 - Kafka/Quarkus
+#### Submódulo 04 - Kafka/Quarkus
 
+### Aula 01 - Oque é mensageria?
 ---
 
 ## 🎯 Próximos Passos:

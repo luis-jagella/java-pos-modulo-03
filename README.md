@@ -196,7 +196,9 @@ Nestas aulas, aprendemos sobre a autenticação durante/após as nossas requisi�
 
 #### Submódulo 04 - Kafka/Quarkus
 
-### Aula 01 - Oque é mensageria?
+#### Aula 01 - Oque é mensageria?
+
+#### Aula 02 - Oque é Kafka
 ---
 
 ## 🎯 Próximos Passos:

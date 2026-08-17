@@ -199,6 +199,8 @@ Nestas aulas, aprendemos sobre a autenticação durante/após as nossas requisi�
 #### Aula 01 - Oque é mensageria?
 
 #### Aula 02 - Oque é Kafka
+
+#### Aula 03 - Primeiros passo com Kafka
 ---
 
 ## 🎯 Próximos Passos:

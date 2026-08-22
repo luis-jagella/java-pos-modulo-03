@@ -196,7 +196,22 @@ Nestas aulas, aprendemos sobre a autenticação durante/após as nossas requisi�
 
 #### Submódulo 04 - Kafka/Quarkus
 
-#### Aula 01 - Oque é mensageria?
+#### Aula 01 — O que é mensageria?
+Nesta aula foram apresentados os conceitos de mensageria e comunicação assíncrona entre aplicações. Em vez de um serviço chamar outro diretamente e aguardar uma resposta, a informação pode ser publicada como uma mensagem para ser processada por outro componente no momento adequado.
+
+Esse modelo reduz o acoplamento entre os sistemas: o produtor precisa saber apenas para qual canal enviar a mensagem, enquanto o consumidor se concentra no processamento. Assim, os serviços podem evoluir e escalar de forma mais independente.
+
+**Fluxo básico:**
+> Produtor → Broker de mensagens → Consumidor
+
+**Conceitos abordados:**
+- **Produtor** → aplicação que cria e publica uma mensagem;
+- **Broker** → intermediário que recebe, armazena e distribui as mensagens;
+- **Consumidor** → aplicação que recebe e processa uma mensagem;
+- **Fila ou tópico** → canal lógico pelo qual as mensagens trafegam;
+- **Comunicação assíncrona** → o produtor não precisa aguardar o processamento para continuar seu fluxo.
+
+Também foi possível compreender os ganhos desse tipo de comunicação, como maior resiliência, melhor capacidade de processamento em paralelo e menor dependência direta entre os serviços. Caso um consumidor fique indisponível temporariamente, o broker pode manter a mensagem até que ela seja processada, conforme a configuração adotada.
 
 #### Aula 02 - FUNDAMENTOS DE KAFKA
 

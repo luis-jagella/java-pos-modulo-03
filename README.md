@@ -264,6 +264,36 @@ No exemplo, o método é acionado sempre que uma nova mensagem chega ao canal `p
 Também foi possível compreender a importância de tratar falhas no processamento e de confirmar corretamente o consumo das mensagens, evitando perda de eventos ou processamentos duplicados em cenários distribuídos.
 
 #### Aula 04 - PRODUTOR COM QUARKUS REACTIVE MESSAGING
+Nesta aula foi apresentado como produzir e enviar mensagens para o Kafka utilizando Quarkus Reactive Messaging. O produtor é o componente responsável por publicar eventos, permitindo que outros serviços interessados possam consumi-los de maneira independente.
+
+No Quarkus, os canais de saída representam o caminho pelo qual a aplicação envia mensagens para o broker. A anotação `@Channel` injeta um emissor associado a esse canal, que pode ser utilizado nas regras de negócio para publicar eventos.
+
+**Conceitos abordados:**
+- Configuração de canais de saída para Kafka;
+- Produção e publicação de mensagens;
+- Uso da anotação `@Channel`;
+- Uso de `Emitter` para enviar eventos;
+- Comunicação assíncrona entre serviços;
+- Separação entre a regra de negócio do produtor e o processamento realizado pelos consumidores.
+
+**Exemplo conceitual:**
+
+```java
+@Inject
+@Channel("pedido-enviado")
+Emitter<String> emitter;
+
+public void enviarPedido(String pedido) {
+    emitter.send(pedido);
+}
+```
+
+Nesse exemplo, o método `enviarPedido` publica o conteúdo recebido no canal `pedido-enviado`. A configuração do Quarkus associa esse canal ao tópico Kafka correspondente.
+
+**Fluxo completo:**
+> API ou serviço → Produtor Quarkus → Tópico Kafka → Consumidor Quarkus → Processamento
+
+Com isso, foi possível compreender como a produção de eventos permite integrar serviços de forma desacoplada. Após enviar a mensagem, o produtor não precisa conhecer a implementação nem aguardar o processamento de cada consumidor interessado naquele evento.
 ---
 
 ## 🎯 Próximos Passos:

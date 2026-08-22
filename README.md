@@ -214,6 +214,25 @@ Esse modelo reduz o acoplamento entre os sistemas: o produtor precisa saber apen
 Também foi possível compreender os ganhos desse tipo de comunicação, como maior resiliência, melhor capacidade de processamento em paralelo e menor dependência direta entre os serviços. Caso um consumidor fique indisponível temporariamente, o broker pode manter a mensagem até que ela seja processada, conforme a configuração adotada.
 
 #### Aula 02 - FUNDAMENTOS DE KAFKA
+Nesta aula foram apresentados os fundamentos do Apache Kafka, uma plataforma distribuída de eventos e mensageria muito utilizada na comunicação entre microsserviços e no processamento de dados em tempo real.
+
+O Kafka organiza as mensagens em **tópicos**. Uma aplicação produtora publica eventos em determinado tópico, enquanto uma ou mais aplicações consumidoras leem esses eventos para executar seus respectivos processamentos.
+
+**Principais conceitos abordados:**
+- **Broker** → servidor Kafka responsável por receber, armazenar e disponibilizar mensagens;
+- **Topic** → categoria ou canal lógico em que os eventos são publicados;
+- **Producer** → aplicação que envia mensagens para um tópico;
+- **Consumer** → aplicação que lê e processa mensagens de um tópico;
+- **Partition** → divisão de um tópico que permite paralelismo e maior capacidade de processamento;
+- **Consumer Group** → grupo de consumidores que divide as partições e o trabalho entre si;
+- **Offset** → posição que identifica uma mensagem dentro de uma partição.
+
+**Fluxo básico:**
+> Producer → Topic Kafka → Consumer Group → Consumers
+
+Também foi possível compreender que as mensagens são persistidas por um período configurável. Dessa forma, consumidores podem retomar o processamento a partir de um offset específico ou reprocessar eventos quando necessário.
+
+As partições permitem escalar o consumo das mensagens, pois diferentes consumidores de um mesmo grupo podem trabalhar em paralelo. Ao mesmo tempo, o Kafka preserva a ordem dos eventos dentro de cada partição.
 
 #### Aula 03 - CONSUMIDOR COM QUARKUS REACTIVE MESSAGING
 

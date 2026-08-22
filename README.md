@@ -235,6 +235,33 @@ Também foi possível compreender que as mensagens são persistidas por um perí
 As partições permitem escalar o consumo das mensagens, pois diferentes consumidores de um mesmo grupo podem trabalhar em paralelo. Ao mesmo tempo, o Kafka preserva a ordem dos eventos dentro de cada partição.
 
 #### Aula 03 - CONSUMIDOR COM QUARKUS REACTIVE MESSAGING
+Nesta aula foi demonstrado como consumir mensagens do Kafka utilizando o Quarkus Reactive Messaging. A integração é simplificada pela extensão SmallRye Reactive Messaging, que conecta os canais da aplicação aos tópicos configurados no broker.
+
+O consumidor recebe os eventos publicados em um tópico e executa alguma regra de negócio, como persistir dados, atualizar uma informação ou acionar outro serviço. Esse processamento acontece de forma orientada a eventos, sem a necessidade de expor ou chamar um endpoint HTTP para cada comunicação.
+
+**Conceitos abordados:**
+- Configuração de canais de entrada para Kafka;
+- Consumo assíncrono de eventos;
+- Uso da anotação `@Incoming`;
+- Desserialização da mensagem recebida;
+- Processamento de regras de negócio a partir de eventos;
+- Integração entre Quarkus, SmallRye Reactive Messaging e Kafka.
+
+**Exemplo conceitual:**
+
+```java
+@Incoming("pedido-recebido")
+public void consumirPedido(String mensagem) {
+    System.out.println("Mensagem recebida: " + mensagem);
+}
+```
+
+No exemplo, o método é acionado sempre que uma nova mensagem chega ao canal `pedido-recebido`. Esse canal é associado, nas configurações da aplicação, a um tópico Kafka.
+
+**Fluxo de consumo:**
+> Tópico Kafka → Canal de entrada → `@Incoming` → Processamento da mensagem
+
+Também foi possível compreender a importância de tratar falhas no processamento e de confirmar corretamente o consumo das mensagens, evitando perda de eventos ou processamentos duplicados em cenários distribuídos.
 
 #### Aula 04 - PRODUTOR COM QUARKUS REACTIVE MESSAGING
 ---

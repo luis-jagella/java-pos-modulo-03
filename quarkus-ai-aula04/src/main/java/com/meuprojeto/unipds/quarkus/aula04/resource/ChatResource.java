@@ -1,6 +1,6 @@
 package com.meuprojeto.unipds.quarkus.aula04.resource;
 
-import com.meuprojeto.unipds.quarkus.aula04.assistant.StudyAssistant;
+import com.meuprojeto.unipds.quarkus.aula04.service.RagService;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.Consumes;
@@ -15,10 +15,10 @@ import jakarta.ws.rs.core.MediaType;
 public class ChatResource {
 
     @Inject
-    StudyAssistant assistant;
+    RagService ragService;
 
     @POST
     public ChatResponse conversar(@Valid ChatRequest request) {
-        return new ChatResponse(assistant.responder(request.pergunta()));
+        return new ChatResponse(ragService.responder(request.pergunta()));
     }
 }

@@ -302,3 +302,47 @@ Com isso, foi possível compreender como a produção de eventos permite integra
 - [ ] Refatorar controllers para utilizar a camada de services;
 - [ ] Finalizar endpoints com DTOs de request e response;
 - [ ] Testar relacionamento entre Produto e Categoria no Postman;
+
+---
+
+#### IA com Quarkus, LangChain4j e Ollama
+
+#### Aula 05 — Por que RAG? Arquitetura de um Pipeline de Conhecimento
+
+Nesta aula foi apresentada a necessidade de complementar modelos de linguagem com informações específicas do domínio da aplicação. Embora um LLM possua conhecimento geral, ele não conhece automaticamente regras internas, documentos da empresa ou dados atualizados. O padrão **RAG** (*Retrieval-Augmented Generation*) resolve esse problema ao recuperar conteúdo relevante antes de enviar a pergunta ao modelo.
+
+O pipeline de conhecimento foi dividido em duas etapas principais:
+
+- **Ingestão** → leitura dos documentos, divisão em trechos (*chunks*), geração de embeddings e armazenamento em uma base vetorial;
+- **Recuperação e geração** → transformação da pergunta em embedding, busca dos trechos semanticamente mais próximos e inclusão desse contexto no prompt enviado ao LLM.
+
+**Fluxo simplificado:**
+
+> Documentos → Ingestão → Chunks + Embeddings → Base vetorial
+>
+> Pergunta do usuário → Busca semântica → Contexto relevante → LLM → Resposta fundamentada
+
+Com essa arquitetura, o serviço deixa de depender apenas do conhecimento genérico do modelo e passa a responder de forma mais útil, contextualizada e especializada no negócio. Também foi reforçado que o RAG não retreina o modelo: ele apenas fornece contexto no momento da resposta.
+
+#### Aula 06 — Ingestão de Dados com Easy RAG
+
+Nesta aula foi demonstrado como implementar a etapa de ingestão usando a extensão **Easy RAG** do Quarkus LangChain4j. A extensão reduz a complexidade inicial do pipeline ao ler documentos de uma pasta configurada, gerar embeddings por meio de um modelo apropriado e armazenar os vetores em memória.
+
+**Conceitos abordados:**
+
+- Adição da dependência `quarkus-langchain4j-easy-rag`;
+- Uso de um modelo de embeddings local no Ollama, como `nomic-embed-text`;
+- Organização dos documentos em `src/main/resources/rag`;
+- Configuração do caminho de ingestão com `quarkus.langchain4j.easy-rag.path`;
+- Divisão dos documentos em segmentos e recuperação dos trechos mais relevantes;
+- Enriquecimento automático do AI Service com o contexto recuperado.
+
+**Exemplo de configuração:**
+
+```properties
+quarkus.langchain4j.ollama.embedding-model.model-id=nomic-embed-text
+quarkus.langchain4j.easy-rag.path=rag
+quarkus.langchain4j.easy-rag.path-type=CLASSPATH
+```
+
+O Easy RAG é adequado para compreender o padrão e criar um primeiro pipeline de conhecimento. Como a base vetorial usada nesse cenário é mantida em memória, os dados precisam ser ingeridos novamente ao reiniciar a aplicação. Em evoluções futuras, o armazenamento pode ser substituído por uma base vetorial persistente.

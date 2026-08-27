@@ -346,3 +346,44 @@ quarkus.langchain4j.easy-rag.path-type=CLASSPATH
 ```
 
 O Easy RAG é adequado para compreender o padrão e criar um primeiro pipeline de conhecimento. Como a base vetorial usada nesse cenário é mantida em memória, os dados precisam ser ingeridos novamente ao reiniciar a aplicação. Em evoluções futuras, o armazenamento pode ser substituído por uma base vetorial persistente.
+
+#### Aula 07 — Vector Database
+
+Nesta aula foi apresentado o papel de um **banco de dados vetorial** em aplicações com IA. Diferentemente de uma busca tradicional baseada apenas em palavras-chave ou filtros exatos, um banco vetorial armazena *embeddings*: representações numéricas que capturam o significado semântico de textos, imagens ou outros conteúdos.
+
+Quando um documento é ingerido, cada trecho é convertido em um vetor e salvo junto com seus metadados. Ao receber uma pergunta, a aplicação também gera o embedding da consulta e procura os vetores mais próximos. Essa busca por similaridade permite encontrar conteúdo relevante mesmo quando a pergunta usa palavras diferentes das presentes no documento.
+
+**Conceitos abordados:**
+
+- **Embedding** → vetor numérico que representa o significado de um conteúdo;
+- **Similaridade semântica** → comparação entre vetores para localizar conteúdos relacionados;
+- **Metadados** → informações adicionais para filtrar, identificar e rastrear os documentos;
+- **Top K** → quantidade de trechos mais similares retornados pela busca;
+- **Persistência** → conservação dos embeddings entre reinicializações da aplicação.
+
+**Fluxo de indexação e busca:**
+
+> Documento → Chunks → Modelo de embeddings → Vetores + metadados → Vector Database
+>
+> Pergunta → Embedding da pergunta → Busca por similaridade → Top K trechos relevantes
+
+O uso de uma base vetorial persistente supera a limitação do Easy RAG em memória, evitando que a aplicação precise processar novamente todos os documentos a cada reinicialização e permitindo ampliar a base de conhecimento de forma mais confiável.
+
+#### Aula 08 — RAG com Vector Database na Prática
+
+Nesta aula foi aplicado o padrão RAG com uma base vetorial persistente. A implementação separa claramente a indexação dos documentos da consulta do usuário: primeiro o conteúdo é transformado em embeddings e armazenado; depois, as perguntas recuperam os trechos semanticamente mais relevantes para compor o contexto enviado ao LLM.
+
+**Etapas do fluxo prático:**
+
+1. Carregar e dividir os documentos em segmentos menores;
+2. Gerar embeddings para cada segmento usando o modelo de embeddings;
+3. Salvar vetores e metadados no banco vetorial;
+4. Gerar o embedding da pergunta recebida pela API;
+5. Recuperar os trechos com maior similaridade;
+6. Enviar pergunta e contexto recuperado ao LLM para gerar a resposta.
+
+**Fluxo completo:**
+
+> Ingestão → Embeddings → Vector Database → Recuperação semântica → Augmentação do prompt → LLM → Resposta
+
+Com essa evolução, o RAG passa a ser mais adequado a cenários reais de negócio, pois a base de conhecimento pode crescer, permanecer disponível após reinicializações e ser atualizada sem depender do contexto interno do modelo. Também foi reforçada a importância de definir bons tamanhos de *chunk*, metadados e quantidade de resultados recuperados, pois esses fatores influenciam diretamente a qualidade da resposta.

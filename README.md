@@ -301,7 +301,7 @@ Com isso, foi possível compreender como a produção de eventos permite integra
 - [ ] organizar pastas e planejamento
 - [ ] Refatorar controllers para utilizar a camada de services;
 - [ ] Finalizar endpoints com DTOs de request e response;
-- [ ] Testar relacionamento entre Produto e Categoria no Postman;
+- [X] Testar relacionamento entre Produto e Categoria no Postman;
 
 ---
 

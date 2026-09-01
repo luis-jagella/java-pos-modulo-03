@@ -3,6 +3,7 @@ package com.meuprojeto.unipds.quarkus.aula04.service;
 import com.meuprojeto.unipds.quarkus.aula04.assistant.StudyAssistant;
 import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.model.embedding.EmbeddingModel;
+import dev.langchain4j.store.embedding.EmbeddingSearchRequest;
 import dev.langchain4j.store.embedding.EmbeddingStore;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
@@ -24,7 +25,13 @@ public class RagService {
 
     public String responder(String pergunta) {
         var embeddingDaPergunta = embeddingModel.embed(pergunta).content();
-        var contexto = embeddingStore.findRelevant(embeddingDaPergunta, MAX_RESULTADOS, SCORE_MINIMO)
+        var busca = EmbeddingSearchRequest.builder()
+                .queryEmbedding(embeddingDaPergunta)
+                .maxResults(MAX_RESULTADOS)
+                .minScore(SCORE_MINIMO)
+                .build();
+
+        var contexto = embeddingStore.search(busca).matches()
                 .stream()
                 .map(resultado -> resultado.embedded().text())
                 .reduce((primeiro, proximo) -> primeiro + "\n\n---\n\n" + proximo)

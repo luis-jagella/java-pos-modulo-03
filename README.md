@@ -387,3 +387,63 @@ Nesta aula foi aplicado o padrão RAG com uma base vetorial persistente. A imple
 > Ingestão → Embeddings → Vector Database → Recuperação semântica → Augmentação do prompt → LLM → Resposta
 
 Com essa evolução, o RAG passa a ser mais adequado a cenários reais de negócio, pois a base de conhecimento pode crescer, permanecer disponível após reinicializações e ser atualizada sem depender do contexto interno do modelo. Também foi reforçada a importância de definir bons tamanhos de *chunk*, metadados e quantidade de resultados recuperados, pois esses fatores influenciam diretamente a qualidade da resposta.
+
+#### Aula 09 — De Chatbots a Agentes Autônomos
+
+Um chatbot normalmente responde a uma mensagem. Um **agente** recebe um objetivo, decide quais passos executar, usa ferramentas quando necessário e só então produz a resposta. O LLM é o componente de decisão; as tools são as ações que ele pode solicitar.
+
+> Objetivo do usuário → LLM decide → Tool(s) → Observação do resultado → Resposta final
+
+**Para lembrar:** autonomia não significa liberdade total. Um bom agente tem objetivo, ferramentas limitadas, memória controlada e limites de segurança.
+
+#### Aula 10 — Capacidades de Agentes com Tools
+
+Tools transformam métodos Java em capacidades que o agente pode invocar, por exemplo consultar andamento, buscar uma informação ou acionar um serviço. No LangChain4j, métodos anotados com `@Tool` precisam ter descrições claras e parâmetros bem definidos, pois o modelo escolhe a ferramenta a partir desse contrato.
+
+**Regra prática:** dê ao agente apenas as tools necessárias para a tarefa e faça cada tool executar uma responsabilidade pequena e auditável.
+
+#### Aula 11 — Conectando Tools e Gerenciando Memória
+
+Como LLMs são stateless, a memória reenvia o histórico relevante a cada interação. Uma chave de sessão, como `@MemoryId`, separa as conversas de usuários diferentes e evita misturar contextos. Para usar tools, a memória é especialmente importante: o agente precisa guardar a chamada anterior e o resultado da tool para continuar o raciocínio.
+
+**Cuidados:** limite a janela de mensagens, evite guardar dados sensíveis e não trate memória de chat como banco de dados permanente.
+
+#### Aula 12 — Gerenciamento de Estado e Validação
+
+Estado representa as informações necessárias para manter o fluxo coerente: sessão, etapa atual, permissões e resultados intermediários. Entradas devem ser validadas antes de chegar ao agente, e ações críticas devem ser idempotentes quando possível, para que uma repetição não gere efeitos duplicados.
+
+**Exemplo:** validar o identificador da sessão, exigir uma pergunta não vazia e registrar qual tool foi executada antes de devolver a resposta.
+
+#### Aula 13 — Model Context Protocol (MCP): Teoria e Arquitetura
+
+O **MCP** é um protocolo aberto que padroniza a forma de disponibilizar tools, recursos e prompts para aplicações de IA. Um MCP Server expõe capacidades; um MCP Client descobre e chama essas capacidades. Isso permite trocar ou reutilizar integrações sem acoplar o agente a uma implementação específica.
+
+> Agente/Client MCP → protocolo MCP → Server MCP → tool, recurso ou sistema externo
+
+**Ideia central:** MCP é para integração padronizada; RAG é para recuperar contexto. Eles se complementam, mas resolvem problemas diferentes.
+
+#### Aula 14 — Criando o MCP Server
+
+Um MCP Server publica ferramentas pequenas, bem descritas e protegidas. Ele deve validar entradas, aplicar autenticação/autorização, limitar o escopo de cada operação e retornar resultados previsíveis. Uma tool de leitura de catálogo, por exemplo, não deve ganhar permissão implícita para apagar registros.
+
+**Checklist:** contrato claro, menor privilégio, validação de entrada, logs/auditoria e tratamento de erro sem vazar dados internos.
+
+#### Aula 15 — Conectando e Integrando o MCP Client
+
+O client configura o transporte do servidor — como `stdio`, HTTP *streamable* ou WebSocket — e disponibiliza as tools descobertas ao AI Service. O agente deve receber somente os servidores MCP necessários para o caso de uso, com timeout, autenticação e observabilidade configurados.
+
+**Fluxo:** configurar client → descobrir tools → permitir tools ao agente → executar com timeout e logs.
+
+#### Aula 16 — Novos Vetores de Ataque e Guardrails
+
+Sistemas com agentes e MCP ampliam a superfície de ataque: *prompt injection*, exfiltração de dados, ferramentas excessivamente permissivas, instruções maliciosas em documentos de RAG e abuso de ferramentas externas. Guardrails são controles que interceptam entrada, chamada de tool e saída para reduzir esses riscos.
+
+**Defesas essenciais:** separar instruções de dados, filtrar entrada, aplicar menor privilégio às tools, limitar dados recuperados, usar autenticação e registrar chamadas.
+
+#### Aula 17 — Guardrails de Saída: Garantia de Qualidade e Auto-Correção
+
+Guardrails de saída verificam a resposta antes de entregá-la ao usuário. Eles podem validar formato JSON, remover dados sensíveis, bloquear conteúdo indevido ou pedir ao modelo uma nova tentativa quando a resposta não atende às regras. A validação deve ser objetiva e ter limite de tentativas para evitar ciclos infinitos.
+
+> Resposta do LLM → validação → aprovada / corrigida / bloqueada
+
+**Para fechar o módulo:** qualidade não vem só do modelo. Ela depende de RAG, tools, memória, estado, limites de segurança e validação de saída trabalhando juntos.

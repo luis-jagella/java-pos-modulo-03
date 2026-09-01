@@ -297,11 +297,11 @@ Com isso, foi possível compreender como a produção de eventos permite integra
 ---
 
 ## 🎯 Próximos Passos:
-- [ ] subir anotações/conceitos estudados
-- [ ] organizar pastas e planejamento
-- [ ] Refatorar controllers para utilizar a camada de services;
-- [ ] Finalizar endpoints com DTOs de request e response;
-- [X] Testar relacionamento entre Produto e Categoria no Postman;
+- [x] subir anotações/conceitos estudados
+- [x] organizar pastas e planejamento
+- [x] Refatorar controllers para utilizar a camada de services;
+- [x] Finalizar endpoints com DTOs de request e response;
+- [x] Testar relacionamento entre Produto e Categoria no Postman;
 
 ---
 

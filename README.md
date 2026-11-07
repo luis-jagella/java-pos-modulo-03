@@ -446,4 +446,4 @@ Guardrails de saída verificam a resposta antes de entregá-la ao usuário. Eles
 
 > Resposta do LLM → validação → aprovada / corrigida / bloqueada
 
-**Para fechar o módulo:** qualidade não vem só do modelo. Ela depende de RAG, tools, memória, estado, limites de segurança e validação de saída trabalhando juntos.
+**Para fechar o módulo:** qualidade não vem só do modelo. Ela depende de RAG, tools, memória, estado, limites de segurança e validação de saída trabalhando juntos...
